@@ -6,5 +6,12 @@
 	</head>
 	<body>
 		<p>This is where the search bar will go</p>
+		{% for post in posts %}
+			<div>
+				<h3><a href="">{{post.title}}</a></h2>
+				<p>published: {{post.published_date}}</p>
+				<p>{{post.text|linebreaks}}</p>
+			</div>
+		{% endfor %}
 	</body>
 </html>
